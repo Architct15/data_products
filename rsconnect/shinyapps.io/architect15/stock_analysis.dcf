@@ -2,6 +2,6 @@ name: stock_analysis
 account: architect15
 server: shinyapps.io
 appId: 75622
-bundleId: 339607
+bundleId: 339655
 url: https://architect15.shinyapps.io/stock_analysis
-when: 1451241150.64756
+when: 1451245676.62472
