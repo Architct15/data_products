@@ -14,12 +14,12 @@ knit        : slidify::knit2slides
 ## Overview
 
 Technical analysis is popular among stock investors.
-We want to find out if they are really effective.
+I want to find out if they are really effective.
 This project explored the following popular technical analysis indicators    
 1. Relative Strength Index    
 2. Simple Moving Average     
 Their effectiveness is measured by correlating their values with future 3 day stock returns. 
-I used 3 days to avoid randomness of daily returns. 
+I used 3 days to avoid randomness of daily returns. The result shows that their correlations are usually very low.
 
 ## Application Inputs
 The inputs to the application include the following:    
@@ -58,5 +58,5 @@ A correlation matrix is then calculated and the correlation matrix is plotted us
 --- .class #id
 
 ## The Correlation Plot
-
+The correlation plot shows that there is a very low correlation between the 3 day return, RSI and SMA.    
 ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png) 
