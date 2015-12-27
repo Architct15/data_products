@@ -46,7 +46,7 @@ chartSeries(IBM, theme="white", TA="addVo();addRSI(n=14);addSMA(n=25)")
 
 --- .class #id 
 
-## The Correlation Plot
+## Calculating The Correlation
 The correlation plot is to analyse the effectiveness of the technical analysis indicators using their correlation with 3 days of stock returns. I used 3 days of return to avoid the daily randomness of the stock movements. So if the indicators are of real predictive power, it should show the effect at least in 3 days. The values are then normalized in the following manner
 
 1. 3 Day Return - The return is normalized as a percentage change in the future 3 days.   
