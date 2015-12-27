@@ -47,12 +47,12 @@
   </hgroup>
   <article data-timings="">
     <p>Technical analysis is popular among stock investors.
-We want to find out if they are really effective.
+I want to find out if they are really effective.
 This project explored the following popular technical analysis indicators<br>
 1. Relative Strength Index<br>
 2. Simple Moving Average<br>
 Their effectiveness is measured by correlating their values with future 3 day stock returns. 
-I used 3 days to avoid randomness of daily returns. </p>
+I used 3 days to avoid randomness of daily returns. The result shows that their correlations are usually very low.</p>
 
 <h2>Application Inputs</h2>
 
@@ -74,7 +74,11 @@ Shiny App Link: <a href="https://architect15.shinyapps.io/stock_analysis">https:
     <p>The stock plot is for explorative data analysis purpose. It lets the user to visually see the stock price fluctuations together with the
 technical analysis indicators.</p>
 
-<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+<pre><code class="r"># plot the chart
+chartSeries(IBM, theme=&quot;white&quot;, TA=&quot;addVo();addRSI(n=14);addSMA(n=25)&quot;) 
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -104,7 +108,8 @@ technical analysis indicators.</p>
     <h2>The Correlation Plot</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+    <p>The correlation plot shows that there is a very low correlation between the 3 day return, RSI and SMA.<br>
+<img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> </p>
 
   </article>
   <!-- Presenter Notes -->

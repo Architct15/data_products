@@ -14,12 +14,12 @@ knit        : slidify::knit2slides
 ## Overview
 
 Technical analysis is popular among stock investors.
-We want to find out if they are really effective.
+I want to find out if they are really effective.
 This project explored the following popular technical analysis indicators    
 1. Relative Strength Index    
 2. Simple Moving Average     
 Their effectiveness is measured by correlating their values with future 3 day stock returns. 
-I used 3 days to avoid randomness of daily returns. 
+I used 3 days to avoid randomness of daily returns. The result shows that their correlations are usually very low.
 
 ## Application Inputs
 The inputs to the application include the following:    
@@ -35,7 +35,14 @@ Shiny App Link: https://architect15.shinyapps.io/stock_analysis
 The stock plot is for explorative data analysis purpose. It lets the user to visually see the stock price fluctuations together with the
 technical analysis indicators.
 
-![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png) 
+
+
+```r
+# plot the chart
+chartSeries(IBM, theme="white", TA="addVo();addRSI(n=14);addSMA(n=25)") 
+```
+
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
 
 --- .class #id 
 
@@ -51,5 +58,5 @@ A correlation matrix is then calculated and the correlation matrix is plotted us
 --- .class #id
 
 ## The Correlation Plot
-
-![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
+The correlation plot shows that there is a very low correlation between the 3 day return, RSI and SMA.    
+![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png) 
