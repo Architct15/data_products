@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Return and Technical Analysis Indicator Correlations</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Stock Return and Technical Analysis Indicator Correlations">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Stock Return and Technical Analysis Indicator Correlations</h1>
+    <h2>Developing Data Products Course Project</h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Overview</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Technical analysis is popular among stock investors.
+We want to find out if they are really effective.
+This project explored the following popular technical analysis indicators<br>
+1. Relative Strength Index<br>
+2. Simple Moving Average<br>
+Their effectiveness is measured by correlating their values with future 3 day stock returns. 
+I used 3 days to avoid randomness of daily returns. </p>
+
+<h2>Application Inputs</h2>
+
+<p>The inputs to the application include the following:<br>
+1. Name of stock - A drop-down selection for user to choose either IBM, Apple or Microsoft<br>
+2. Period for Relative Strength Indicator - A slider input with integer value from 2 to 20 with a default of 14<br>
+3. Period for Simple Moving Average - A slider input with integer value from 10 to 50 with a default of 25<br>
+Shiny App Link: <a href="https://architect15.shinyapps.io/stock_analysis">https://architect15.shinyapps.io/stock_analysis</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The Stock Plot</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The stock plot is for explorative data analysis purpose. It lets the user to visually see the stock price fluctuations together with the
+technical analysis indicators.</p>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The Correlation Plot</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The correlation plot is to analyse the effectiveness of the technical analysis indicators using their correlation with 3 days of stock returns. I used 3 days of return to avoid the daily randomness of the stock movements. So if the indicators are of real predictive power, it should show the effect at least in 3 days. The values are then normalized in the following manner</p>
+
+<ol>
+<li>3 Day Return - The return is normalized as a percentage change in the future 3 days.<br></li>
+<li>Relative Strength Index - The RSI indicator is normalized by dividing it by 100 so that it falls between 1 and 0<br></li>
+<li>Simple Moving Average - The SMA is usually used to measure the deviation of stock price from the average of last n days. The SMA value is normalized to show the percentage deviation of stock closing price from the SMA value.<br></li>
+</ol>
+
+<p>A correlation matrix is then calculated and the correlation matrix is plotted using the &#39;corrplot&#39; package. The color and size of the circles shows the extent of the correlations. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The Correlation Plot</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Overview'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The Stock Plot'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The Correlation Plot'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='The Correlation Plot'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
