@@ -46,7 +46,7 @@ ta_string <- paste("addVo();addRSI(n=", 14, ");addSMA(n=", 25, ")")
 ```{r echo=TRUE}
 # plot the chart
 chartSeries(IBM, theme="white", TA="addVo();addRSI(n=14);addSMA(n=25)") 
-```
+```   
 
 --- .class #id 
 
