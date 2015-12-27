@@ -74,7 +74,11 @@ Shiny App Link: <a href="https://architect15.shinyapps.io/stock_analysis">https:
     <p>The stock plot is for explorative data analysis purpose. It lets the user to visually see the stock price fluctuations together with the
 technical analysis indicators.</p>
 
-<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+<pre><code class="r"># plot the chart
+chartSeries(IBM, theme=&quot;white&quot;, TA=&quot;addVo();addRSI(n=14);addSMA(n=25)&quot;) 
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -104,7 +108,7 @@ technical analysis indicators.</p>
     <h2>The Correlation Plot</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+    <p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> </p>
 
   </article>
   <!-- Presenter Notes -->

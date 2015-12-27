@@ -35,7 +35,14 @@ Shiny App Link: https://architect15.shinyapps.io/stock_analysis
 The stock plot is for explorative data analysis purpose. It lets the user to visually see the stock price fluctuations together with the
 technical analysis indicators.
 
-![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png) 
+
+
+```r
+# plot the chart
+chartSeries(IBM, theme="white", TA="addVo();addRSI(n=14);addSMA(n=25)") 
+```
+
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
 
 --- .class #id 
 
@@ -52,4 +59,4 @@ A correlation matrix is then calculated and the correlation matrix is plotted us
 
 ## The Correlation Plot
 
-![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
+![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png) 

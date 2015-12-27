@@ -42,8 +42,10 @@ getSymbols("IBM")
 IBM <- last(IBM, "12 months")
 # create the technical analysis string with user input parameters
 ta_string <- paste("addVo();addRSI(n=", 14, ");addSMA(n=", 25, ")")
+```
+```{r echo=TRUE}
 # plot the chart
-chartSeries(IBM, theme="white", TA=ta_string) 
+chartSeries(IBM, theme="white", TA="addVo();addRSI(n=14);addSMA(n=25)") 
 ```
 
 --- .class #id 
